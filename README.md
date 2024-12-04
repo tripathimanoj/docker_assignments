@@ -1,19 +1,20 @@
 
-# Docker Assignments 
+# Docker Assignments
+
 ## https://docs.google.com/document/d/1iYoB8YtFzlcmd2KYUoR_iw2Ek3bXhh6nFfKJZ4OCkZw/edit?tab=t.0
 
-# Docker Assignments Solution...
+# Docker Assignments Solutions...
 
 ## Assignment 1: Dockerizing a Flask Application
 
  https://github.com/03sarath/mlops-specialization-assignments/blob/master/docker-assignment/Assignments/Dockerizing%20a%20Flask%20Application.md
 
-## solution | Here i am using linux instance (Amazon Linux2) in aws cloud .
+## Solutions | Here in All Solutionss i will be using linux instance (Amazon Linux2) in aws cloud .
 
 **Step 1:**
 create a ubuntu instance in aws cloud.
 
-**Step 2:** 
+**Step 2:**
 install git and docker and upload folder structure to aws instance ie via git or via ssh.
 
 ```
@@ -94,6 +95,8 @@ docker run -p 5000:5000 gile_uploads
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss4.png)
 
  
+---
+***
 
  #############################
 
@@ -101,7 +104,7 @@ docker run -p 5000:5000 gile_uploads
 
  https://github.com/03sarath/mlops-specialization-assignments/blob/master/docker-assignment/Assignments/Dockerizing%20a%20Node.js%20Application%20with%20Environment%20Variables.md
 
-## solution
+## Solutions
 
 **Step 1** and **Step 2** are same as above
 
@@ -163,7 +166,7 @@ and access the node application via instance ip4:3000 ex  http://13.203.103.98:3
 
 https://github.com/03sarath/mlops-specialization-assignments/blob/master/docker-assignment/Assignments/Dockerizing%20%20a%20breast%20cancer%20ML%20model.md
 
-## solution
+## Solutions
 
 **Step 1** and **Step 2** are same as above
 
@@ -221,7 +224,7 @@ screen shot
 
 https://github.com/03sarath/docker-node-app/blob/main/getting-started-example.md
 
-## solution
+## Solutions
 
 **Step 1** and **Step 2** are same as above
 
