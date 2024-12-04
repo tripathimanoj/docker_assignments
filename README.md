@@ -1,6 +1,8 @@
 
-# Docker Assignments
+# Docker Assignments 
+## https://docs.google.com/document/d/1iYoB8YtFzlcmd2KYUoR_iw2Ek3bXhh6nFfKJZ4OCkZw/edit?tab=t.0
 
+# Docker Assignments Solution...
 
 ## Assignment 1: Dockerizing a Flask Application
 
