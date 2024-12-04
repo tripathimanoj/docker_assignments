@@ -10,9 +10,11 @@
 
 ## solution | Here i am using linux instance (Amazon Linux2) in aws cloud .
 
-step1: create a ubuntu instance in aws cloud.
+**Step 1:**
+create a ubuntu instance in aws cloud.
 
-step2: install git and docker and upload folder structure to aws instance ie via git or via ssh.
+**Step 2:** 
+install git and docker and upload folder structure to aws instance ie via git or via ssh.
 
 ```
 sudo yum update -y
@@ -30,7 +32,8 @@ docker --version
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss1.png)
 
-step3 create a docker file:
+**Step 3:**  
+create a docker file:
 
 [ec2-user@ip-172-31-10-202 file_uploads]$ cat Dockerfile
 ```
@@ -63,7 +66,7 @@ CMD ["flask", "run"]
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss2.png)
 
-step 4
+**Step 4:**
 
 build docker image and run that container:
 ```
@@ -72,7 +75,8 @@ docker run -p 5000:5000 gile_uploads
 ```
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/docker0.png)
-step 5
+
+**Step 5:**
 
  update aws instance inbound rule instance > security group >inbound rule 
  add a new tcp rule with port 5000 and save 
@@ -81,7 +85,7 @@ step 5
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss3.png)
 
-step 6
+**Step 6:**
 
  then access file by instance public ip4:5000 ex http://13.203.103.98:5000/
 
@@ -99,9 +103,10 @@ step 6
 
 ## solution
 
-step1 and step 2 are same as above
+**Step 1** and **Step 2** are same as above
 
-step3 create a docker file:
+**Step 3:**
+create a docker file:
 
 ```
 [ec2-user@ip-172-31-10-202 node_app]$ cat Dockerfile
@@ -129,12 +134,12 @@ screen shot
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss5.png)
 
-step 4: 
+**Step 4: **
 
 update aws instance inbound rule instance > security group >inbound rule 
 add a new tcp rule with port 3000 and save [As same as in above assignment]
 
-step 5: 
+**Step 5:** 
 
 run the docker build and run command to execute the container.
 
@@ -160,9 +165,10 @@ https://github.com/03sarath/mlops-specialization-assignments/blob/master/docker-
 
 ## solution
 
-step 1 and step 2 are same as above
+**Step 1** and **Step 2** are same as above
 
-step 3 create a docker file:
+**Step 3:**
+create a docker file:
 
 ```
 # Use the official Python image from the Docker Hub
@@ -187,12 +193,12 @@ screen shot
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss8.png)
 
-step 4: 
+**Step 4:**
 
 update aws instance inbound rule instance > security group >inbound rule 
 add a new tcp rule with port 3000 and save [As same as in above assignment]
 
-step 5: 
+**Step 5:**
 
 run the docker build and run command to execute the container.
 
@@ -217,9 +223,10 @@ https://github.com/03sarath/docker-node-app/blob/main/getting-started-example.md
 
 ## solution
 
-step 1 and step 2 are same as above
+**Step 1** and **Step 2** are same as above
 
-step 3 create a docker file:
+**Step 3**
+create a docker file:
 
 ```
 # Use an official Python runtime as a parent image
@@ -244,7 +251,7 @@ ENV NAME World
 CMD ["python", "app.py"]
 ```
 
-step 4:
+**Step 4:**
 
 run the following docker commands
 
@@ -257,7 +264,7 @@ docker run -p 5000:5000 python-flask-sample
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss10.png)
 
-step 5:
+**Step 5:**
 
 Access the flask app by instance ip4:5000 ex 13.203.103.98:5000
 
