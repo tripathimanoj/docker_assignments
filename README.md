@@ -21,7 +21,8 @@ sudo service docker start
 
 sudo usermod -a -G docker ec2-user
 
-docker --version```
+docker --version
+```
 
 --screen shot 1 
 
@@ -51,7 +52,8 @@ ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
 -# Run app.py when the container launches
-CMD ["flask", "run"]```
+CMD ["flask", "run"]
+```
 
 [ec2-user@ip-172-31-10-202 file_uploads]$
 
@@ -64,7 +66,8 @@ step 3
 build docker image and run that container:
 ```
 docker build -t file_uploads .
-docker run -p 5000:5000 gile_uploads```
+docker run -p 5000:5000 gile_uploads
+```
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/docker0.png)
  step 4 
@@ -102,7 +105,8 @@ sudo yum update -y
 sudo amazon-linux-extras install docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user
-docker --version```
+docker --version
+```
 
 --screen shot 1 
 
