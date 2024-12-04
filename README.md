@@ -24,7 +24,7 @@ sudo usermod -a -G docker ec2-user
 docker --version
 ```
 
---screen shot 1 
+--screen shot
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss1.png)
 
@@ -57,11 +57,11 @@ CMD ["flask", "run"]
 
 [ec2-user@ip-172-31-10-202 file_uploads]$
 
---screen shot 2
+--screen shot
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss2.png)
 
-step 3
+step 4
 
 build docker image and run that container:
 ```
@@ -70,20 +70,20 @@ docker run -p 5000:5000 gile_uploads
 ```
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/docker0.png)
- step 4 
+step 5
 
  update aws instance inbound rule instance > security group >inbound rule 
  add a new tcp rule with port 5000 and save 
 
-screen shot 4
+--screen shot
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss3.png)
 
-step 5 
+step 6
 
  then access file by instance public ip4:5000 ex http://13.203.103.98:5000/
 
- screen shot 3
+ --screen shot
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss4.png)
 
