@@ -220,3 +220,49 @@ https://github.com/03sarath/docker-node-app/blob/main/getting-started-example.md
 step 1 and step 2 are same as above
 
 step 3 create a docker file:
+
+```
+# Use an official Python runtime as a parent image
+FROM python:3.8-slim
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy the current directory contents into the container at the working directory
+COPY . .
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Make port 5000 available to the world outside this container
+EXPOSE 5000
+
+# Define environment variable
+ENV NAME World
+
+# Run app.py when the container launches
+CMD ["python", "app.py"]
+```
+
+step 4:
+
+run the following docker commands
+
+```
+docker build -t python-flask-sample .
+docker run -p 5000:5000 python-flask-sample
+```
+
+-- screen shot
+
+![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss10.png)
+
+step 5:
+
+Access the flask app by instance ip4:5000 ex 13.203.103.98:5000
+
+--screen shot 
+
+![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss11.png)
+
+# End Of Assignments ------------------------
