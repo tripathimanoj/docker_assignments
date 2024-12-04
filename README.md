@@ -278,4 +278,57 @@ Access the flask app by instance ip4:5000 ex 13.203.103.98:5000
 
 ---
 ---
+
+## Uploading all the images to Dockerhub...
+
+**Step 1:** 
+
+In aws instance login with docker
+
+```
+docker login
+```
+
+**Step 2:**
+
+Provide a appropiate tag name to all the Docker Images.
+
+```
+docker tag e94e2bd3acde manojtripathi/python-flask-sample:latest
+docker tag ce438c2815dd manojtripathi/breast_cancer_app:latest 
+docker tag 72ccff7dcd52 manojtripathi/node_app:latest 
+docker tag 3aacdaaa86c8 manojtripathi/file_uploads:latest
+```
+
+--screen shot
+
+![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss12.png)
+
+**Step 3:**
+
+Now push the code to you Docker repository.
+
+```
+docker push manojtripathi/python-flask-sample:latest
+docker push manojtripathi/breast_cancer_app:latest
+docker push manojtripathi/node_app:latest
+docker push manojtripathi/file_uploads:latest
+```
+
+--screen shot
+
+![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss13.png)
+
+**Step 4:**
+
+After pushing all the Docker images to Dockerhub let's check the images on Dockerhub repository.
+login to dockerhub > Repositories and their you can see all the pushed Docker Images.
+
+--screen shot
+
+![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss14.png)
+
+---
+---
+
 # End Of Assignments ------------------------
