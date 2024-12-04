@@ -12,6 +12,7 @@ step1: create a ubuntu instance in aws cloud.
 
 step2: install git and docker and upload folder structure to aws instance ie via git or via ssh.
 
+```
 sudo yum update -y
 
 sudo amazon-linux-extras install docker
@@ -20,7 +21,7 @@ sudo service docker start
 
 sudo usermod -a -G docker ec2-user
 
-docker --version
+docker --version```
 
 --screen shot 1 
 
@@ -29,6 +30,7 @@ docker --version
 step3 create a docker file:
 
 [ec2-user@ip-172-31-10-202 file_uploads]$ cat Dockerfile
+```
 -# Use the official Python image from the Docker Hub
 FROM python:3.9-slim
 
@@ -49,7 +51,7 @@ ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
 -# Run app.py when the container launches
-CMD ["flask", "run"]
+CMD ["flask", "run"]```
 
 [ec2-user@ip-172-31-10-202 file_uploads]$
 
@@ -60,9 +62,9 @@ CMD ["flask", "run"]
 step 3
 
 build docker image and run that container:
-
+```
 docker build -t file_uploads .
-docker run -p 5000:5000 gile_uploads
+docker run -p 5000:5000 gile_uploads```
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/docker0.png)
  step 4 
@@ -95,12 +97,12 @@ step 5
 step1: create a ubuntu instance in aws cloud.
 
 step2: install git and docker and upload folder structure to aws instance ie via git or via ssh.
-
+```
 sudo yum update -y
 sudo amazon-linux-extras install docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user
-docker --version
+docker --version```
 
 --screen shot 1 
 
