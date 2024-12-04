@@ -91,23 +91,63 @@ step 6
 
  #############################
 
- ## Assignment 2: Dockerizing a Node.js Application with Environment Variables
+  ## Assignment 2: Dockerizing a Node.js Application with Environment Variables
 
  https://github.com/03sarath/mlops-specialization-assignments/blob/master/docker-assignment/Assignments/Dockerizing%20a%20Node.js%20Application%20with%20Environment%20Variables.md
 
 ## solution
 
-step1: create a ubuntu instance in aws cloud.
-
-step2: install git and docker and upload folder structure to aws instance ie via git or via ssh.
-```
-sudo yum update -y
-sudo amazon-linux-extras install docker
-sudo service docker start
-sudo usermod -a -G docker ec2-user
-docker --version
-```
-
---screen shot 1 
+step1 and step 2 are same as above
 
 step3 create a docker file:
+
+```
+[ec2-user@ip-172-31-10-202 node_app]$ cat Dockerfile
+# Use the official Node.js image from the Docker Hub
+FROM node:16-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and install dependencies
+COPY package.json /app
+RUN npm install
+
+# Copy the application code into the container
+COPY . /app
+
+# Expose port 3000 for the app to run
+EXPOSE 3000
+
+# Command to run the Node.js app
+CMD ["npm", "start"]
+[ec2-user@ip-172-31-10-202 node_app]$
+```
+screen shot
+
+![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss5.png)
+
+step 4: 
+
+update aws instance inbound rule instance > security group >inbound rule 
+add a new tcp rule with port 3000 and save [As same as in above assignment]
+
+step 5: 
+
+run the docker build and run command to execute the container.
+
+```
+
+docker build -t node_app .
+docker run -e GREETING='Welcome to Docker!' -p 3000:3000 node_app
+
+```
+
+![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss6.png)
+
+and access the node application via instance ip4:3000 ex  http://13.203.103.98:3000/
+
+![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss7.png)
+
+
+##################################
