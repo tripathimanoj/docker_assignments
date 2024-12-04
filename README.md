@@ -151,3 +151,70 @@ and access the node application via instance ip4:3000 ex  http://13.203.103.98:3
 
 
 ##################################
+
+## Assignment 3: Dockerizing a breast cancer ML model
+
+https://github.com/03sarath/mlops-specialization-assignments/blob/master/docker-assignment/Assignments/Dockerizing%20%20a%20breast%20cancer%20ML%20model.md
+
+## solution
+
+step 1 and step 2 are same as above
+
+step 3 create a docker file:
+
+```
+# Use the official Python image from the Docker Hub
+FROM python:3.9-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose the port the app runs on
+EXPOSE 9696
+
+# Run the Flask app
+CMD ["python", "predict.py"]
+```
+screen shot
+
+![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss8.png)
+
+step 4: 
+
+update aws instance inbound rule instance > security group >inbound rule 
+add a new tcp rule with port 3000 and save [As same as in above assignment]
+
+step 5: 
+
+run the docker build and run command to execute the container.
+
+```
+
+docker build -t breast_cancer_app .
+docker run -d -p 9696:9696 breast_cancer_app
+python predict-test.py
+
+```
+After running container in detach mode now we can run the another command so that it takes the input to the docker container and return the possible prediction.
+
+screen shot
+
+![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss9.png)
+
+#########################################################
+
+## Assignment 4: Dockerizing Flask app
+
+https://github.com/03sarath/docker-node-app/blob/main/getting-started-example.md
+
+## solution
+
+step 1 and step 2 are same as above
+
+step 3 create a docker file:
