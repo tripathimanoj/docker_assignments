@@ -96,9 +96,8 @@ docker run -p 5000:5000 gile_uploads
 
  
 ---
-***
+---
 
- #############################
 
   ## Assignment 2: Dockerizing a Node.js Application with Environment Variables
 
@@ -160,7 +159,8 @@ and access the node application via instance ip4:3000 ex  http://13.203.103.98:3
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss7.png)
 
 
-##################################
+---
+---
 
 ## Assignment 3: Dockerizing a breast cancer ML model
 
@@ -218,7 +218,8 @@ screen shot
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss9.png)
 
-#########################################################
+---
+---
 
 ## Assignment 4: Dockerizing Flask app
 
@@ -275,4 +276,6 @@ Access the flask app by instance ip4:5000 ex 13.203.103.98:5000
 
 ![Docker Assignment Image](https://raw.githubusercontent.com/tripathimanoj/docker_assignments/main/dockerss11.png)
 
+---
+---
 # End Of Assignments ------------------------
